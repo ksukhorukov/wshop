@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe Product, type: :model do
   subject { create(:product) }
 
   it "is valid with valid attributes" do
