@@ -2,6 +2,8 @@ body, html {
   height: 100%;
 }
 
+
+
 .main-container {
 	height: 100%;
   background: url('background.jpg');
@@ -47,4 +49,9 @@ body, html {
   font-family: 'Source Code Pro', monospace;
 }
 
-
+.devise-form-container {
+  margin-top: 10%;
+  height: 100%;
+  width: 100%;
+  vertical-align: center;
+}
