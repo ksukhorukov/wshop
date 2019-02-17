@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20190217133203) do
   create_table "shops", force: :cascade do |t|
     t.string "slug"
     t.string "title"
-    t.string "descripion"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "admin_id"

@@ -5,5 +5,6 @@ FactoryBot.define do
     price { rand(1000) }
     discount { rand(100) }
     text_after_purchase { FFaker::Lorem.paragraph }
+    shop { create(:shop) }
   end
 end

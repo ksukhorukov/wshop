@@ -3,10 +3,8 @@ class Product < ApplicationRecord
 
   belongs_to :shop
   
-  validates_presence_of :title
-  validates_presence_of :description
-  validates_presence_of :price
-	validates_presence_of :text_after_purchase
+  validates :title, :description, :price, 
+  					:text_after_purchase, presence: true
 
   validates_numericality_of :price
   validates_numericality_of :discount

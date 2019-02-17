@@ -3,7 +3,7 @@ class Shops < ActiveRecord::Migration[5.1]
   	create_table :shops do |t|
   		t.string :slug
   		t.string :title
-  		t.string :descripion
+  		t.string :description
   		t.timestamps
   	end
   end
