@@ -6,9 +6,10 @@ Rails.application.routes.draw do
 	end
 
 	scope :admin, module: :admin do 
-		devise_for :admins
 		root to: 'panel#index'
 		resources :products
 	end
+
+	devise_for :admins
 
 end

@@ -5,11 +5,11 @@ require 'rails_helper'
 RSpec.describe Shop, type: :model do
 	 subject { build(:shop) }
 
-	it 'is valid if constructed in proper way' do 
+	it 'is valid if constructed in a proper way' do 
 		expect(subject).to be_valid
 	end
-	
-	it 'it is able to have products' do 
+
+	it 'it can have products' do 
 		subject.products << create(:product)
 		expect(subject.products.size).to be_equal(1)
 	end
