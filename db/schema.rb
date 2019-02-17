@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20190217042642) do
     t.boolean "status"
   end
 
-  create_table "shop", force: :cascade do |t|
+  create_table "shops", force: :cascade do |t|
     t.string "slug"
     t.string "title"
     t.string "descripion"
