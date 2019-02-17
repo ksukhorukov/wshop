@@ -4,6 +4,7 @@ class Shops < ActiveRecord::Migration[5.1]
   		t.string :slug
   		t.string :title
   		t.string :description
+  		t.integer :admin_id
   		t.timestamps
   	end
   end
