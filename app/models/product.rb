@@ -1,6 +1,8 @@
 class Product < ApplicationRecord
   self.table_name = 'products'
 
+  belongs_to :shop
+  
   validates_presence_of :title
   validates_presence_of :description
   validates_presence_of :price
