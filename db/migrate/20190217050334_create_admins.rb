@@ -1,4 +1,4 @@
-class Admins < ActiveRecord::Migration[5.1]
+class CreateAdmins < ActiveRecord::Migration[5.1]
   def up
   	create_table :admins
   end

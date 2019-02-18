@@ -5,6 +5,4 @@ class Admin < ApplicationRecord
 	self.table_name = 'admins'
 
 	has_one :shop, dependent: :destroy
-
-	private
 end
