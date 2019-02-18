@@ -1,0 +1,15 @@
+<h1> Продукты </h1>
+<br/>
+<% current_admin.shop.products.each do |product| %>
+	<%= product.title %><br/>
+	<%= product.description %></br>
+	<%= product.price %></br>
+	<%= product.discount %></br>
+	<%= product.instock %></br>
+	<%= product.text_after_purchase %><br/>
+	<%= link_to "Редактировать", edit_product_path(product) %>
+	<%= link_to "Удалить", product_path(product), method: :delete,  :confirm => "Are you sure" %>
+<% end %>		
+<hr>
+<br>
+<%= link_to "Добавить продукт", new_product_path %>

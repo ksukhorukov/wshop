@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 	scope :admin, module: :admin do 
 		root to: 'panel#index'
 		resources :products
+		resources :settings
+		resources :statistics, only: [:index]
 	end
 
 	devise_for :admins, controllers: {
