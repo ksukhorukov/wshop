@@ -1,0 +1,9 @@
+<h1>Настройки магазина</h1>
+
+<ul>
+	<li>Название: <%= @shop.title %></li>
+	<li>Описание: <%= @shop.description %></li>
+	<li>Человеко-понятный URL: <%= @shop.slug %></li>
+</ul>
+<br>
+<a href='<%= edit_shop_path %>'>Изменить</a>
