@@ -7,8 +7,8 @@ Rails.application.routes.draw do
 
 	scope :admin, module: :admin do 
 		root to: 'panel#index'
-		resource :shop, only: [:index, :edit, :update]
 		resources :products
+		resource :shop, only: [:index, :edit, :update]
 		resources :statistics, only: [:index]
 		resources :sales, only: [:index]
 	end

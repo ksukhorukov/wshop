@@ -1,4 +1,6 @@
-class StatisticsController < Admin::AdministrationController
+class Admin::StatisticsController < Admin::AdministrationController
 
-def index
+	def index
+	end
+
 end
