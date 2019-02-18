@@ -1,0 +1,15 @@
+<h1><%= @shop.title %>
+<br/>
+<h2>Наши товары</h2>
+<br/>
+
+	<%  @shop.products.each do |product| %>
+	<hr>
+	<h4><%= product.title %></h5>
+	<h5><%= product.description %></h5>
+	<br/>
+	<h5><%= product.price - product.discount %></h5>
+	<hr>
+	<% end %>
+
+

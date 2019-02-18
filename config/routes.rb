@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
  	root to: 'pages#index'
 
-	scope :shop, module: :shop do 
-		get '/:id_or_slug', to: 'shop#index'
-	end
+ 
+	get '/shop/:slug', to: 'shopes#index'
 
 	scope :admin, module: :admin do 
 		root to: 'panel#index'
