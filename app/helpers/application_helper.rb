@@ -6,4 +6,5 @@ module ApplicationHelper
 
 	def current_cart
 		@cart || current_user.update(cart: Cart.create)
+	end
 end

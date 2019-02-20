@@ -2,8 +2,8 @@ Rails.application.routes.draw do
  	root to: 'pages#index'
 
  
-	get '/shop/:slug', to: 'shopes#index'
-
+	get  '/shop/:slug', to: 'shopes#index'
+	
 	scope :admin, module: :admin do 
 		root to: 'panel#index'
 		resources :products
@@ -16,4 +16,5 @@ Rails.application.routes.draw do
            :sessions => "admins/sessions",
            :registrations => "admins/registrations" }
 
+  resource :cart, only: [:update]
 end

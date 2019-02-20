@@ -46,6 +46,7 @@ group :development, :test do
   gem 'ffaker', '~> 2.10'
   gem 'factory_bot'
   gem 'factory_bot_rails'
+  gem 'rubocop'
 end
 
 group :development do
