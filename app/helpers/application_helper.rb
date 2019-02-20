@@ -1,10 +1,9 @@
 module ApplicationHelper
 	def current_user
-		@user ||= User.create
-		session[:user_id] = @user.id
+		@user ||= User.create(cart: Cart.create)
 	end
 
 	def current_cart
-		@cart || current_user.update(cart: Cart.create)
-	end
+		@cart ||= current_user.cart
+	end	
 end
