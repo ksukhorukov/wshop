@@ -1,6 +1,8 @@
 class Product < ApplicationRecord
   self.table_name = 'products'
 
+  mount_uploader :shop_item, ShopItemUploader
+
   belongs_to :shop
   
   validates :title, :description, :price, 

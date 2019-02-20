@@ -8,7 +8,6 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.float    :discount
   	  t.boolean  :instock
   	  t.string   :text_after_purchase
-  		t.string   :file
   		t.timestamps
   	end
   end

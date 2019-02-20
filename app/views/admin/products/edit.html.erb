@@ -1,13 +1,15 @@
 <%= form_for @product do |f| %>
-	<%= f.label :title %><br>
-	<%= f.text_field :title %><br>
-	<%= f.label :description %><br>
-	<%= f.text_field :description %><br>
-	<%= f.label :price %><br>
-	<%= f.number_field :price %><br>
-	<%= f.label :discount %><br>
-	<%= f.number_field :discount %><br>
-	<%= f.label :text_after_purchase %><br>
-	<%= f.text_field :text_after_purchase %><br>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+	<%= f.label :price %>
+	<%= f.number_field :price %>
+	<%= f.label :discount %>
+	<%= f.number_field :discount %>
+	<%= f.label :text_after_purchase %>
+	<%= f.text_field :text_after_purchase %>
+	<%= f.label :file %>
+	<%= f.file_field  :shop_item %>
 	<%= f.submit %>
 <% end %>

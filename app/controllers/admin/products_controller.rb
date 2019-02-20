@@ -18,6 +18,7 @@ class Admin::ProductsController < Admin::AdministrationController
 	end
 
 	def create
+		byebug
 		current_admin.shop.products.create(product_params)
 		redirect_to products_path
 	end
@@ -43,6 +44,6 @@ class Admin::ProductsController < Admin::AdministrationController
 	end
 
   def product_params
-    params.require(:product).permit(:title, :description, :price, :discount, :text_after_purchase)
+    params.require(:product).permit(:title, :description, :price, :discount, :text_after_purchase, :instock, :shop_item)
   end
 end
