@@ -2,7 +2,6 @@ class CreateProducts < ActiveRecord::Migration[5.1]
   def change
   	create_table :products do |t|
   		t.integer  :shop_id
-      t.integer  :cart_id
   	  t.string   :title
   	  t.string   :description 
       t.float    :price 
