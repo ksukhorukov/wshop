@@ -17,4 +17,5 @@ Rails.application.routes.draw do
            :registrations => "admins/registrations" }
 
   resource :cart, only: [:update]
+
 end

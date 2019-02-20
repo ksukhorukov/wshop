@@ -5,7 +5,7 @@ class Admins::RegistrationsController < Devise::RegistrationsController
     build_resource(sign_up_params)
 
 
-    resource.shop = Shop.create(title: 'Заголовок магазина', 
+    resource.shop = ::Shop.create(title: 'Заголовок магазина', 
                                 description: 'Описание магазина')
     resource.save
     yield resource if block_given?

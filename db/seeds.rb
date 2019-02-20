@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-admin = Admin.create(name: 'admin', password: '1234567', password_confirmation: '1234567')
+admin = Admin.create(name: 'admin', email: 'admin@shop.ru', password: '1234567', password_confirmation: '1234567')
 
 shop = Shop.create(admin: admin, title: 'Mega Shop', description: 'digital products')
 

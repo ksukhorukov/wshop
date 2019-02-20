@@ -1,4 +1,6 @@
 class Admin::ProductsController < Admin::AdministrationController
+	before_action :find_product, only: [:edit, :update, :destroy]
+
 	def index
 		@products = current_admin.shop.products
 	end
@@ -12,7 +14,7 @@ class Admin::ProductsController < Admin::AdministrationController
 	end
 
 	def edit
-		@product = Product.find_by_id(params[:id])
+		@product
 	end
 
 	def create
@@ -30,12 +32,15 @@ class Admin::ProductsController < Admin::AdministrationController
 	end
 
 	def destroy
-  	@product = current_admin.shop.products.find(params[:id])
   	@product.destroy
 		redirect_to products_path
 	end
 
 	private
+
+	def find_product
+		@product ||= Product.find_by_id(params[:id])
+	end
 
   def product_params
     params.require(:product).permit(:title, :description, :price, :discount, :text_after_purchase)
