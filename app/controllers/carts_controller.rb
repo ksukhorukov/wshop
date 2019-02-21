@@ -12,13 +12,6 @@ class CartsController < ApplicationController
 	def cart_params
 		params.require(:data).permit(:product_id)
 	end
-
-	private
-
-	def current_user
-		session[:user] ||= User.create(cart: Cart.create)
-		@user ||= User.find(session[:user]['id'])
-	end
 end
 
 
