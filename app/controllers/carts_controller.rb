@@ -1,6 +1,10 @@
 class CartsController < ApplicationController
 	skip_before_action :verify_authenticity_token
 
+	def show
+		@cart  = current_user.cart
+	end
+
 	def update
 	 	product = Product.find(cart_params[:product_id])
 	 	if product.present?

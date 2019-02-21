@@ -1,0 +1,13 @@
+<% if @cart.products.present? %>
+	<center><h1>Ваши покупки</h1></center>
+	<br/>
+	<%= @cart.products&.each do |product| %> 
+	<ul>
+		<li><%= product.title %></li>
+	</ul>
+	<% end %>
+<% else %>
+  <center><h1>Ваша корзина пуста</h1></center>
+ <% end %>
+
+
