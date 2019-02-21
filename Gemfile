@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.6', '>= 4.6.1'
 gem 'pundit', '~> 2.0', '>= 2.0.1'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem "paranoia", "~> 2.2"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
