@@ -1,8 +1,8 @@
 class CartsController < ApplicationController
-	skip_before_action :verify_authenticity_token
+	skip_before_action :verify_authenticity_token 
 
 	def show
-		@cart  = current_user.cart
+		@cart  = current_cart
 	end
 
 	def update
@@ -11,6 +11,10 @@ class CartsController < ApplicationController
 	 		CartProductShop.create(product: product, shop: product.shop, cart: current_user.cart)
 	 	end
 	 	head :no_content
+	end
+
+	def checkout
+		@cart = current_cart
 	end
 
 	def cart_params
