@@ -3,9 +3,10 @@ class Cart < ApplicationRecord
   has_many :products, through: :carts_products_shops
 
   belongs_to :user
+  belongs_to :purchase
 
   def cost
-  	summ = 0
+  	summ = 0.0
 
 		products.each do |product|
 			if product.discount_type == 'percent'
