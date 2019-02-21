@@ -1,6 +1,8 @@
 class Product < ApplicationRecord
   self.table_name = 'products'
 
+  acts_as_paranoid
+
   mount_uploader :shop_item, ShopItemUploader
 
   belongs_to :shop
