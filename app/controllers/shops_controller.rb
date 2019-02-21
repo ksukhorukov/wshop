@@ -1,6 +1,6 @@
 class ShopsController < ApplicationController
 	def index
-		@shops = Shop.all
+		@shops = Shop.where(instock: true)
 		
 	end
 
