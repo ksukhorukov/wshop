@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190221110658) do
+ActiveRecord::Schema.define(version: 20190221124449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,15 @@ ActiveRecord::Schema.define(version: 20190221110658) do
     t.string "discount_type", default: "absolute"
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_products_on_deleted_at"
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.string "email"
+    t.string "card_truncated"
+    t.string "status"
+    t.string "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "shops", force: :cascade do |t|
