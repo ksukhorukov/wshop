@@ -18,7 +18,7 @@ class Admin::ProductsController < Admin::AdministrationController
 	end
 
 	def create
-		byebug
+		
 		current_admin.shop.products.create(product_params)
 		redirect_to products_path
 	end
