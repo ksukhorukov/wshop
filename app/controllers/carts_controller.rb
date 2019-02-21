@@ -13,10 +13,6 @@ class CartsController < ApplicationController
 	 	head :no_content
 	end
 
-	def checkout
-		@cart = current_cart
-	end
-
 	def cart_params
 		params.require(:data).permit(:product_id)
 	end

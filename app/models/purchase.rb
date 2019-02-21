@@ -1,5 +1,5 @@
 class Purchase < ApplicationRecord
-	has_one :cart
+	belongs_to :cart
 
 	validates :email, :card, presence: true
 end
