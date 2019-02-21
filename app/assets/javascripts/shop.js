@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
   $('a.purchase').click(function(event) {
   	event.preventDefault();
   	var product_id = $(this).attr("id")
