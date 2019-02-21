@@ -8,13 +8,13 @@
 
 admin = Admin.create(name: 'admin', email: 'admin@shop.ru', password: '1234567', password_confirmation: '1234567')
 
-shop = Shop.create(admin: admin, title: 'Mega Shop', description: 'digital products')
+shop = Shop.create(admin: admin, title: 'Mega Shop', description: 'digital products', slug: 'mega')
 
 (1..10).each do |n|
 	product = Product.create(shop: shop, 
 													 title: FFaker::Book.title,
 													 description: FFaker::Lorem.paragraph,
-													 price: rand(1000),
+													 price: rand(1000) + 100,
 													 discount: rand(100),
 													 instock: true,
 													 text_after_purchase: 'Congratulations!')
