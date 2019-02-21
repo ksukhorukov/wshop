@@ -8,7 +8,6 @@ $(function() {
   		context: document.body,
   		data: "data[product_id]=" + product_id
 		}).done(function() {
-			alert(product_id + ' Well done!');
   		$(this).addClass( "in_the_cart");
 		});
   });
