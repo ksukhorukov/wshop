@@ -2,7 +2,7 @@ body {
   margin: 0px;
   height: 100%;
   width: 100%;
-  background: blue;
+  background: white;
   font-family: 'Rubik', sans-serif;
 }
 
@@ -20,9 +20,18 @@ body {
 }
 
 .jumbotron {
-    background-color: yellow;
+  background-color: yellow;
 }
   
+
+.login-container {
+  margin-left: 40%;
+  margin-top: 150px;
+}
+
+.login-form {
+  text-align: left;
+}
 /*.main-menu {
   background: yellow;
 }
