@@ -6,6 +6,11 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
+.admin_actions {
+  margin-top: 40px;
+  text-align: left;
+}
+
 .errors_explanation {
   text-align: left;
   color: red;

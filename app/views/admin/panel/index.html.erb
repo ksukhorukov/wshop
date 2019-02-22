@@ -1,8 +1,20 @@
+<br/>
 <center><h1>Добро пожаловать!</h1></center>
 <br/>
-<ul>
-	<li><a href='<%= products_path %>'>Продукты</a></li>
-	<li><a href='<%= sales_path %>'>Продажи</a></li>
-	<li><a href='<%= statistics_path %>'>Статистика</a></li>
-	<li><a href='<%= edit_shop_path %>'>Настройки магазина</a></li>
-</ul>
+<div class="admin_actions">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4"></div>
+			<div class="col-lg-8">
+				<ul>
+					<li><a href='<%= products_path %>'><h2>Продукты</h2></a></li>
+					<li><a href='<%= sales_path %>'><h2>Продажи</h2></a></li>
+					<li><a href='<%= statistics_path %>'><h2>Статистика</h2></a></li>
+					<li><a href='<%= edit_shop_path %>'><h2>Настройки магазина</h2></a></li>
+					<br/>
+					<li><a href='<%= destroy_admin_session_path %>'><h2>Выйти</h2></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
