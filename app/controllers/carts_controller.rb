@@ -8,7 +8,7 @@ class CartsController < ApplicationController
 	def update
 	 	product = Product.find(cart_params[:product_id])
 	 	if product.present?
-	 		CartProductShop.create(product: product, shop: product.shop, cart: current_user.cart)
+	 		CartProductShop.create(product: product, shop: product.shop, cart: current_cart)
 	 	end
 	 	head :no_content
 	end

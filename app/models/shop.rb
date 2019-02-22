@@ -7,5 +7,5 @@ class Shop < ApplicationRecord
 	belongs_to :admin
 	has_many :carts
 	has_many :products
-	has_many :purchases
+	has_many :orders
 end

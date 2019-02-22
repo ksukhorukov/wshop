@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+	include ::ProductPriceConcern
+
   self.table_name = 'products'
 
   acts_as_paranoid

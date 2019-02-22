@@ -3,7 +3,7 @@ Rails.application.routes.draw do
  
 	get  '/shop/:slug', to: 'shops#show'
 	get  '/shops', 			to: 'shops#index'
-	get  '/purchases/:link', to: 'purchases#show'
+	get  '/order/:uuid', to: 'order#show'
 	
 	scope :admin, module: :admin do 
 		root to: 'panel#index'
@@ -18,5 +18,5 @@ Rails.application.routes.draw do
            :registrations => "admins/registrations" }
 
   resource :cart, only: [:show, :update]
-
+  resources :orders, only: [:new, :edit, :create, :update]
 end
