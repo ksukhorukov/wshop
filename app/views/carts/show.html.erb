@@ -1,14 +1,1 @@
-<% if @cart.products.present? %>
-	<center><h1>Товары</h1></center>
-	<br/>
-	<ul>
-	<% @cart.products.each do |product| %> 
-		<li><%= product.title %></li>
-	<% end %>
-	</ul>
-	<a href="<%= new_order_path %>">Купить</a>
-<% else %>
-  <center><h1>Ваша корзина пуста</h1></center>
-<% end %>
-
-
+<h1>show cart</h1>

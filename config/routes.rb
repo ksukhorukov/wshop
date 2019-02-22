@@ -17,6 +17,6 @@ Rails.application.routes.draw do
            :sessions => "admins/sessions",
            :registrations => "admins/registrations" }
 
-  resource :cart, only: [:show, :update]
-  resources :orders, only: [:new, :edit, :create, :update]
+  resources :carts
+  resources :purchases
 end

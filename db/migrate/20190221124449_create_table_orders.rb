@@ -1,6 +1,6 @@
-class CreateTableOrders < ActiveRecord::Migration[5.1]
+class CreateTablePurchases < ActiveRecord::Migration[5.1]
   def change
-    create_table :orders do |t|
+    create_table :purchases do |t|
     	t.integer :shop_id
         t.integer :cart_id
     	t.string :email

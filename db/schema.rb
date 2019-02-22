@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20190221124449) do
 
   create_table "carts", force: :cascade do |t|
     t.integer "user_id"
+    t.integer "shop_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
