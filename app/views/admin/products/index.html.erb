@@ -31,8 +31,15 @@
 			<td><%= product.title %></td>
 		<td><%= product.description %></td>
 		<td><%= product.price %></td>
-		<td><%= product.discount %></td>
-		<td><%= product.instock %></td>
+		<td><%  if product.discount_type == 'absolute' %>
+						 <%=		product.discount %>
+						 <% elsif product.discount_type == 'percent' %>
+						 <%=		product.discount.to_s + "%" %>
+						 <% else %>
+						 <%= "Нет" %>
+						 <% end %> 
+		</td>
+		<td><%= product.instock ? "Да" : "Нет" %></td>
 		<td><%= product.text_after_purchase %></td>
 		<td><%= link_to "Редактировать", edit_product_path(product) %></td>
 		<td><%= link_to "Удалить", product_path(product), method: :delete,  :confirm => "Are you sure" %></td>

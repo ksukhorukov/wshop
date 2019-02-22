@@ -47,6 +47,10 @@ class Admin::ProductsController < Admin::AdministrationController
 	end
 
   def product_params
-    params.require(:product).permit(:title, :description, :price, :discount, :text_after_purchase, :instock, :shop_item)
+    params.require(:product).permit(:title, :description, 
+    																:price, :discount, 
+    																:text_after_purchase, 
+    																:instock, :shop_item,
+    																:discount_type)
   end
 end
