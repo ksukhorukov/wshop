@@ -30,13 +30,13 @@ end
 (1..10).each do |n|
 	user = User.create
 	cart = Cart.create(user: user, shop: shop)
-	cart.products << products.sample
+	CartProductShop.create(cart: cart, product: products.sample, shop: shop)
 	purchase = Purchase.create(shop: shop, 
 														 cart: cart, 
 														 email: FFaker::Internet.email, 
 														 card_truncated: 1234,
 														 status: :complete,
 														 link: SecureRandom.uuid,
-														 summ: cart.total_costs)
+														 summ: cart.total_cost)
 end
 
