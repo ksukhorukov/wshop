@@ -1,7 +1,7 @@
 class PurchasesController < ApplicationController
 
   def new
-  	@purchase = Purchase.new(cart: current_cart)
+  	@purchase = Purchase.new(cart: Cart.find(params[:cart_id]))
   end
 
   def create
@@ -23,6 +23,6 @@ class PurchasesController < ApplicationController
   private
 
   def purchase_params
-  	params.require(:purchase).permit(:email, :card_truncated)
+  	params.require(:purchase).permit(:cart_id, :email, :card_truncated)
   end
 end

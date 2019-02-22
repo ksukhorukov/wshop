@@ -46,18 +46,6 @@ ActiveRecord::Schema.define(version: 20190221124449) do
     t.index ["shop_id"], name: "index_carts_products_shops_on_shop_id"
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.integer "shop_id"
-    t.integer "cart_id"
-    t.string "email"
-    t.string "card_truncated"
-    t.string "status"
-    t.string "link"
-    t.float "summ"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "products", force: :cascade do |t|
     t.integer "shop_id"
     t.string "title"
@@ -73,6 +61,18 @@ ActiveRecord::Schema.define(version: 20190221124449) do
     t.string "discount_type"
     t.datetime "deleted_at"
     t.index ["deleted_at"], name: "index_products_on_deleted_at"
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.integer "shop_id"
+    t.integer "cart_id"
+    t.string "email"
+    t.string "card_truncated"
+    t.string "status"
+    t.string "link"
+    t.float "summ"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "shops", force: :cascade do |t|
