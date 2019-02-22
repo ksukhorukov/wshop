@@ -3,6 +3,7 @@ class Shop < ApplicationRecord
 
 	validates :title, :description, presence: true
 	validates :slug, uniqueness: true
+	validates :slug, presence: true
 
 	belongs_to :admin
 	has_many :carts

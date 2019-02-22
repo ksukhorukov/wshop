@@ -18,9 +18,12 @@ class Admin::ProductsController < Admin::AdministrationController
 	end
 
 	def create
-		
-		current_admin.shop.products.create(product_params)
-		redirect_to products_path
+		@product = current_admin.shop.products.create(product_params)
+		unless @product.valid?
+			render 'new', product: @product
+		else
+			redirect_to products_path
+		end
 	end
 
 	def update
