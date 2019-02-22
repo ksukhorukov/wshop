@@ -9,7 +9,7 @@ class Cart < ApplicationRecord
   belongs_to :shop
   
 
-  def cost
+  def total_cost
   	products.map { |product| product.price_with_discount }.reduce(&:+)
 	end
 end
