@@ -20,5 +20,5 @@ Rails.application.routes.draw do
   resources :carts
   resources :purchases
   
-  get '/purchases/:cart_id', to: 'purchases#new'
+  get '/purchases/new/:cart_id', to: 'purchases#new'
 end

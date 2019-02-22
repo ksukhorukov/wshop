@@ -6,7 +6,7 @@
 		<li><%= product.title %></li>
 	<% end %>
 	</ul>
-	<a href="<%= new_purchase_path %>">Купить</a>
+	<a href="/purchases/new/<%= cart.id %>">Купить</a>
 <% else %>
   <center><h1>Ваша корзина пуста</h1></center>
 <% end %>

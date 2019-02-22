@@ -6,18 +6,20 @@ class PurchasesController < ApplicationController
 
   def create
     @purchase = Purchase.new(purchase_params)
-    @purchase.cart = current_cart
+    @purchase.cart = Cart.find(purchase_params[:cart_id])
+    @purchase.shop = @purchase.cart.shop
     @purchase.link = SecureRandom.uuid
-    
+
     if @purchase.save
-      redirect_to "/purchase/#{@purchase.link}"
+      redirect_to "/purchases/#{@purchase.link}"
     else
       render 'new'
     end
   end
 
   def show
-  	@purchase = purchase.where(link: params[:link])
+    byebug
+  	@purchase = Purchase.find_by_link(params[:id])
   end
 
   private
