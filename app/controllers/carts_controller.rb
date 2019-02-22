@@ -4,7 +4,7 @@ class CartsController < ApplicationController
 	def index
 		@carts = current_user.carts
 	end
-	
+
 	# def show
 	# 	@carts  = current_user.carts
 	# end
@@ -24,8 +24,9 @@ class CartsController < ApplicationController
 	private
 
 	def current_cart
-		cart = Cart.where(shop_id: @product.shop_id, user_id: current_user.id).order('created_at DESC').first
-		current_user.carts.create(shop_id: @product.shop_id) unless cart.present? 			
+		cart = Cart.where(shop_id: @product.shop_id, user_id: current_user.id).order('created_at DESC').first	
+		return cart if cart.present?
+		current_user.carts.create(shop_id: @product.shop_id)  			
 	end
 end
 
