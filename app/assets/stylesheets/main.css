@@ -1,4 +1,73 @@
-body, html {
+body {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  background: blue;
+  font-family: 'Rubik', sans-serif;
+}
+
+.main-container {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.main-jumbotron {
+  margin-top: 10%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.jumbotron {
+    background-color: yellow;
+}
+  
+/*.main-menu {
+  background: yellow;
+}
+
+.main-menu a:hover {
+  text-decoration-line: underline;
+}
+
+.main-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.main-menu li {
+   float: right;
+}
+
+.main-menu li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.main-menu li a:hover {
+  text-decoration: underline;
+}
+*/
+.devise-form-container {
+  margin-top: 10%;
+  height: 100%;
+  width: 100%;
+  vertical-align: center;
+}
+
+.btn-status {
+  margin: 10px 50px 10px 50px;
+  width: 200px;
+  height: 50px;
+}
+
+
+/*body, html {
   height: 100%;
 }
 
@@ -55,3 +124,4 @@ body, html {
   width: 100%;
   vertical-align: center;
 }
+*/
