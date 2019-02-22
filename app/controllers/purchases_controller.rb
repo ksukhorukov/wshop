@@ -18,7 +18,6 @@ class PurchasesController < ApplicationController
   end
 
   def show
-    byebug
   	@purchase = Purchase.find_by_link(params[:id])
   end
 
