@@ -12,4 +12,15 @@ class Product < ApplicationRecord
 
   validates_numericality_of :price
   validates_numericality_of :discount
+
+  def price_with_discount
+  	if discount.present?
+  		byebug
+  		if discount.type == :absolute
+  			price - discount
+  		else
+  			price  = ((price * discount) / 100)
+  		end
+  	end
+  end
 end

@@ -5,16 +5,18 @@
 			<% if cart.products.present? %>
 				<h1> Магазин "<%= cart.shop.title %>"</h1>
 				<table border="1px" cellpadding="7">
-				<th>#</th><th>Наименование</th><th>Цена</th>
+				<th>#</th><th>Наименование</th><th>Цена со скидкой</th>
 				<% cart.products.each_with_index do |product, n| %>
 					<tr>
 					<td><%= n + 1 %></td>
 					<td><%= product.title %></td> 
 					<td><%= product.price %></td>
+					<td><%= product.price_with_discount %></td>
 					</tr>
 				<% end %>
+					<tr><td colspan="3">Итого <%= cart.total_cost %> рублей</td></tr>
 				</table>
-				<a href="/purchases/new/<%= cart.id %>">Купить</a>
+				<a href="/purchases/new/<%= cart.id %>"><br/><b>Оплатить</b></a>
 			<% else %>
 			  <center><h1>Ваша корзина пуста</h1></center>
 			<% end %>
