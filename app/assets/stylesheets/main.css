@@ -21,6 +21,12 @@ body {
   padding-top: 10px;
   display: block;
   width: 100%;
+  padding: 0 5px;
+}
+
+.payment-form label {
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 .payment-form input[type=submit] {
