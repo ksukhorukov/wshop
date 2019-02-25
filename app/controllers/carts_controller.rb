@@ -12,10 +12,12 @@ class CartsController < ApplicationController
   # end
 
   def create
+    byebug
     @product = Product.find(cart_params[:product_id])
     if @product.present?
       CartProductShop.create(product: @product, shop: @product.shop, cart: current_cart)
     end
+    byebug
     head :no_content
   end
 

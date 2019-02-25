@@ -18,9 +18,9 @@ class Product < ApplicationRecord
   def price_with_discount
     if discount.present?
       if discount_type == 'absolute'
-        price - discount
+        self.price - self.discount
       else
-        price = ((price * discount) / 100.0)
+        price = ((self.price * self.discount) / 100.0)
       end
     end
   end
