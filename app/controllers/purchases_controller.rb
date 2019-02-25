@@ -6,12 +6,14 @@ class PurchasesController < ApplicationController
 
   def create
     @purchase = Purchase.new(purchase_params)
-    @purchase.cart = Cart.find(purchase_params[:cart_id])
+    current_user_cart = Cart.find(purchase_params[:cart_id])
+    @purchase.cart = current_user_cart
     @purchase.shop = @purchase.cart.shop
     @purchase.link = SecureRandom.uuid
     @purchase.summ = @purchase.cart.total_cost
 
     if @purchase.save
+      current_user_cart.update_attributes(status: 'archive')
       redirect_to "/purchases/#{@purchase.link}"
     else
       render 'new'

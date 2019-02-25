@@ -1,1 +1,21 @@
-<h1>Statistics</h1>
+<h1>Статистика продаж</h1><br/>
+<% @purchases.each do |purchase| %>
+	Дата и время: <%= purchase.created_at %><br/>
+	Купленный товар:
+	<ul>
+			<% if purchase.cart %>
+				<% purchase.cart.products.each do  |product| %>
+					<li><%= product.title %></li>
+				<% end %>
+			<% end %>
+	</ul>
+	<br/>
+	Сумма попкупки: <%= purchase.summ %><br>
+	E-mail: <%= purchase.email %><br>
+	Карта: <%= purchase.card_truncated %><br>
+	<a href="<%= purchase.link %>">Ссылка на получение покупки: </a><br/>
+	<a href="#">Отменить</a><br/>
+<% end %>
+<br/>
+<br/>
+<h2><a href="/admin">Назад</a>

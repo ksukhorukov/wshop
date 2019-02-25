@@ -3,14 +3,18 @@
 <h2>Наши товары</h2>
 <br/>
 
-	<%  @shop.products.each do |product| %>
-		<% if product.instock? %>
-			<hr>
-			<h4><%= product.title %></h5>
-			<h5><%= product.description %></h5>
-			<br/>
-			<h5><%= product.price - product.discount %></h5>
-			<h5><a href='#' class="purchase" id="<%= product.id %>">В корзину</a><h5>
-			<hr>
-		<% end %>
+<%  @shop.products.each do |product| %>
+	<% if product.instock? %>
+		<hr>
+		<h4><%= product.title %></h5>
+		<h5><%= product.description %></h5>
+		<br/>
+		<h5><%= product.price - product.discount %></h5>
+		<h5><a href='#' class="purchase" id="<%= product.id %>">В корзину</a><h5>
+		<hr>
 	<% end %>
+<% end %>
+
+<a href="/shops">Назад к списку магазинов</a>
+<br/>
+<a href="/carts">Перейти в корзину</a>

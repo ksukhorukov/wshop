@@ -1,4 +1,12 @@
 <br/>
-<center><h1>Корзина</h1></center>
+<center><h1>
+	<% if current_user.carts.count == 0 %>
+		Корзина пуста
+	<% else %>
+		Корзина
+	<% end %>
+</h1></center>
 <br/>
 <%= render partial: 'cart', collection: @carts %>
+</br>
+<center><a href="/shops"><h1>Список магазинов</h1></a></center>

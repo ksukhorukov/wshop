@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-	has_many :carts
+	has_many :carts, -> { where(status: 'active') }
 end
