@@ -1,9 +1,11 @@
-class ShopsController < ApplicationController
-	def index
-		@shops = Shop.all
-	end
+# frozen_string_literal: true
 
-	def show
-		@shop ||= Shop.find_by_slug(params[:slug])
-	end
+class ShopsController < ApplicationController
+  def index
+    @shops = Shop.all
+  end
+
+  def show
+    @shop ||= Shop.find_by_slug(params[:slug])
+  end
 end

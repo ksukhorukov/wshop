@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CartProductShop < ApplicationRecord
-	self.table_name = 'carts_products_shops'
+  self.table_name = 'carts_products_shops'
 
   belongs_to :product
   belongs_to :cart

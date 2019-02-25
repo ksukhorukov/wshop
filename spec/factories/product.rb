@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
-  factory :product, class: 'Product' do 
+  factory :product, class: 'Product' do
     title { FFaker::Lorem.word }
     description { FFaker::Lorem.paragraph }
     price { rand(1000) }

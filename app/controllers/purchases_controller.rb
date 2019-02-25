@@ -1,7 +1,8 @@
-class PurchasesController < ApplicationController
+# frozen_string_literal: true
 
+class PurchasesController < ApplicationController
   def new
-  	@purchase = Purchase.new(cart: Cart.find(params[:cart_id]))
+    @purchase = Purchase.new(cart: Cart.find(params[:cart_id]))
   end
 
   def create
@@ -22,7 +23,7 @@ class PurchasesController < ApplicationController
   end
 
   def show
-  	@purchase = Purchase.find_by_link(params[:id])
+    @purchase = Purchase.find_by_link(params[:id])
   end
 
   def destroy
@@ -34,6 +35,6 @@ class PurchasesController < ApplicationController
   private
 
   def purchase_params
-  	params.require(:purchase).permit(:cart_id, :email, :card_truncated)
+    params.require(:purchase).permit(:cart_id, :email, :card_truncated)
   end
 end

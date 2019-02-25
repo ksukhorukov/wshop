@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Product < ApplicationRecord
   self.table_name = 'products'
 
@@ -6,20 +8,20 @@ class Product < ApplicationRecord
   mount_uploader :shop_item, ShopItemUploader
 
   belongs_to :shop
-  
-  validates :title, :description, :price, 
-  					:text_after_purchase, presence: true
+
+  validates :title, :description, :price,
+            :text_after_purchase, presence: true
 
   validates_numericality_of :price
   validates_numericality_of :discount
 
   def price_with_discount
-  	if discount.present?
-  		if discount_type == 'absolute'
-  			price - discount
-  		else
-  			price  = ((price * discount) / 100.0)
-  		end
-  	end
+    if discount.present?
+      if discount_type == 'absolute'
+        price - discount
+      else
+        price = ((price * discount) / 100.0)
+      end
+    end
   end
 end
