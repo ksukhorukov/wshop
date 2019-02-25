@@ -1,24 +1,17 @@
-# README
+#Wshop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Marketplace. Manage your shops like a boss!
 
-Things you may want to cover:
+##Requirements
 
-* Ruby version
+- Ruby 2.6.0
+- Rails 5.1
+- PostgreSQL
 
-* System dependencies
+##Installaton & Run
 
-* Configuration
+- bundle install
+- rake db:setup
+- rails s -p 3000
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##[EOF]

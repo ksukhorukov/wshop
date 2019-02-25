@@ -11,6 +11,7 @@ class PurchasesController < ApplicationController
     @purchase.shop = @purchase.cart.shop
     @purchase.link = SecureRandom.uuid
     @purchase.summ = @purchase.cart.total_cost
+    @Purchase.status = 'complete'
 
     if @purchase.save
       current_user_cart.update_attributes(status: 'archive')
@@ -22,6 +23,12 @@ class PurchasesController < ApplicationController
 
   def show
   	@purchase = Purchase.find_by_link(params[:id])
+  end
+
+  def destroy
+    purchase = Purchase.find(params[:id])
+    purchase.update_attributes(status: 'cancelled')
+    head :no_content
   end
 
   private

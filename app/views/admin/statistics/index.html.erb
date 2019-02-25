@@ -13,8 +13,9 @@
 	Сумма попкупки: <%= purchase.summ %><br>
 	E-mail: <%= purchase.email %><br>
 	Карта: <%= purchase.card_truncated %><br>
-	<a href="<%= purchase.link %>">Ссылка на получение покупки: </a><br/>
-	<a href="#">Отменить</a><br/>
+	<a href='<%= "/purchases/#{purchase.link}" %>'>Ссылка на получение покупки </a><br/>
+	Статус: <%= purchase.status %></br>
+	<%= link_to "Отменить", purchase_path(purchase), method: :delete,  :confirm => "Вы уверены?" %><br/><br/>
 <% end %>
 <br/>
 <br/>
