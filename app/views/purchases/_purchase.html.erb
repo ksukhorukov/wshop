@@ -1,0 +1,19 @@
+<div class="conteiner">
+	<div class="row">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">		
+			<div class="product-table">	
+				<table class="purchase" border="1px" cellpadding="7">
+				<th>#</th><th>Продукт</th>
+				<% purchase.cart.products.each_with_index do |product, number| %>
+					<tr>
+						<td><%= number + 1%></td>
+						<td><a href="<%= product.shop_item.url %>"><%= product.title %></a></td>
+					</tr>	
+				<% end %>
+				</table>
+			</div>
+		</div>
+		</div class="col-lg-4"></div>
+	</div>
+</div>

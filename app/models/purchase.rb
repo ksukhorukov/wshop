@@ -16,6 +16,7 @@ class Purchase < ApplicationRecord
 	end
 
 	def truncate_card
-		card_truncated = card_truncated.slice(12, 4)
+		byebug
+		self.card_truncated = self.card_truncated.slice(12, 4)
 	end
 end

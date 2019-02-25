@@ -6,6 +6,54 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
+.payment-form {
+  text-align: left;
+  width: 400px;
+  padding: 40px;
+  border: solid;
+  border-color: gray;
+  border-radius: 15px;
+  background: lightgray;
+  margin-top: 100px;
+}
+
+.payment-form input {
+  padding-top: 10px;
+  display: block;
+  width: 100%;
+}
+
+.payment-form input[type=submit] {
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.cart {
+ text-align: center;
+}
+
+.cart table {
+  margin-left: 40%;
+}
+
+.purchased-products {
+  text-align: center;
+}
+
+.product-table {
+  text-align: center;
+  margin-left: 30%;
+}
+
+.shops-container {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.shop-list ul {
+  list-style: none;
+}
+
 .admin_actions {
   margin-top: 40px;
   text-align: left;

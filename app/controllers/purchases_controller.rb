@@ -9,6 +9,7 @@ class PurchasesController < ApplicationController
     @purchase.cart = Cart.find(purchase_params[:cart_id])
     @purchase.shop = @purchase.cart.shop
     @purchase.link = SecureRandom.uuid
+    @purchase.summ = @purchase.cart.total_cost
 
     if @purchase.save
       redirect_to "/purchases/#{@purchase.link}"
