@@ -15,11 +15,10 @@ class Product < ApplicationRecord
 
   def price_with_discount
   	if discount.present?
-  		byebug
-  		if discount.type == :absolute
+  		if discount_type == 'absolute'
   			price - discount
   		else
-  			price  = ((price * discount) / 100)
+  			price  = ((price * discount) / 100.0)
   		end
   	end
   end

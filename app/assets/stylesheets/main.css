@@ -35,11 +35,7 @@ body {
 }
 
 .cart {
- text-align: center;
-}
-
-.cart table {
-  margin-left: 40%;
+  margin-left: 20px;
 }
 
 .purchased-products {
