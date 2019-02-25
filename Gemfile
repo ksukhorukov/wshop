@@ -41,6 +41,8 @@ gem 'devise', '~> 4.6', '>= 4.6.1'
 gem 'paranoia', '~> 2.2'
 gem 'pundit', '~> 2.0', '>= 2.0.1'
 
+gem 'ffaker', '~> 2.10'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
