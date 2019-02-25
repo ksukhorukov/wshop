@@ -12,7 +12,7 @@ class PurchasesController < ApplicationController
     @purchase.shop = @purchase.cart.shop
     @purchase.link = SecureRandom.uuid
     @purchase.summ = @purchase.cart.total_cost
-    @Purchase.status = 'complete'
+    @purchase.status = 'complete'
 
     if @purchase.save
       current_user_cart.update_attributes(status: 'archive')
