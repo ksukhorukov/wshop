@@ -15,6 +15,23 @@
 	<% end %>
 <% end %>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+	  $('a.purchase').click(function(event) {
+	  	event.preventDefault();
+	  	var product_id = $(this).attr("id")
+	  	$.ajax({
+	  		url: "/carts",
+	  		method: "POST",
+	  		context: document.body,
+	  		data: "data[product_id]=" + product_id
+			}).done(function() {
+	  		$(this).addClass( "in_the_cart");
+			});
+	  });
+	});	
+</script>
+
 <a href="/shops">Назад к списку магазинов</a>
 <br/>
 <a href="/carts">Перейти в корзину</a>

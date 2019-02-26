@@ -21,6 +21,6 @@ class Cart < ApplicationRecord
             else
               product.price
             end
-    summ
+    summ.round
   end
 end
